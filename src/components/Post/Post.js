@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Post.css"
-import { Card, Button, Icon, Image } from 'semantic-ui-react'
+import { Card, Button, Icon, Image, CardGroup } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 
 export default function Post(props) {
@@ -9,7 +9,9 @@ export default function Post(props) {
 
   return (
     <div className='postDiv' >
+
       <Card fluid >
+       
         <Card.Content>
         <Link to={"/users/" + userId}>
           <Image
@@ -40,11 +42,11 @@ export default function Post(props) {
             <Icon name='comment' size='large' />
           </Button>
           <Button circular color='grey' >
-            <Icon name='like' size='large' />
+            <Icon name='like' size='mini' />
           </Button>
         </Card.Content>
       </Card>
-
+   
 
     </div>
   );
